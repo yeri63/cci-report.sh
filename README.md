@@ -1,2 +1,2 @@
 # cci-report.sh
-Quickly lookup storage information on Hitachi VSP series arrays using raidcom CLI commands.
+Quickly lookup storage information on Hitachi VSP series arrays using CLI interface.
