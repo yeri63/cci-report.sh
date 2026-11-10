@@ -1,5 +1,5 @@
 # cci-report.sh
-<p>Quickly lookup storage information on Hitachi VSP series arrays using CLI. This program does almost everything that Storage Navigator / Device Manager does, but much faster using an ssh terminal. This was created to speed up collection of storage array information to document changes, and quickly "roll back" changes in case of errors. This became a source for creating Runbook of standard procedures, ie. storage allocation, decommission, volume expansion, volume replication, host migration, etc.</p>
+<p>Quickly lookup storage information on Hitachi VSP series arrays using CLI. This program does almost everything that Storage Navigator / Device Manager does, but much faster using an ssh terminal. This was initially created to collect monthly storage usage, but later evolved to perform other useful tasks, like recording array state before and after changes, creation of RAIDCOM scripts to automate storage tasks, storage allocation, decommission, volume expansion, volume replication, host migration, etc.</p>
 
     $ cci-report.sh --help
     usage: cci-report.sh <serial_number> [hostgrp|ldev|logins|port|tier|pool|unalloc|used]
