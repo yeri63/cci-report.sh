@@ -1,5 +1,20 @@
 # cci-report.sh
-<p>Quickly lookup storage information on Hitachi VSP series arrays using CLI. This program does almost everything that Storage Navigator / Device Manager does, but much faster using an ssh terminal. This was initially created to collect monthly storage usage, but later evolved to perform other useful tasks, like recording array state before and after changes, creation of RAIDCOM scripts to automate storage tasks, storage allocation, decommission, volume expansion, volume replication, host migration, etc.</p>
+<p>Quickly lookup storage information on Hitachi VSP series arrays using CLI. This program does almost everything that Storage Navigator / Device Manager does, but much faster using an ssh terminal. This was initially created to collect monthly storage usage, but later evolved to perform other useful tasks, like recording array state before and after changes, used to create RAIDCOM scripts to automate storage tasks, ie. storage allocation, decommission, volume expansion, volume replication, host migration, etc.</p>
+<div align="center">
+
+Option  | Description 
+:-- | :--  
+hostgrp | Display the Host Group Ports, Host Group Names, Host Names, HBA WWNs, Host Mode and Bits.
+ldev | Display LDEV Volumes, Labels, Size, Hex LUN, Dec LUN, and Ports.
+logins | Display hosts currently logged into each HostGroup Port.
+port | Display list of all HostGroup and Replication Ports on the array.
+tier | Display LDEV Volumes, Labels, Size, Consumption, Tier Relocation, Policy and usage by Tier.
+pool | Display Total and Used Capacity, Threshold, Status and Threshold Limit for each Pool.
+unalloc | Display LDEV Volumes which have not been allocated or mapped to hosts.
+used | Display LDEV Volumes which have been allocated to hosts.
+</div>
+
+<p>The last command is only used when allocating new storage, as a method to see which LDEV volume(s) are available to allocate new storage to a host, as indicated by missing LDEV values in the table of LDEVs generated.</p>
 
     $ cci-report.sh --help
     usage: cci-report.sh <serial_number> [hostgrp|ldev|logins|port|tier|pool|unalloc|used]
